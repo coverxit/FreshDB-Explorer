@@ -44,6 +44,7 @@
             WeifenLuo.WinFormsUI.Docking.DockPanelGradient dockPanelGradient3 = new WeifenLuo.WinFormsUI.Docking.DockPanelGradient();
             WeifenLuo.WinFormsUI.Docking.TabGradient tabGradient6 = new WeifenLuo.WinFormsUI.Docking.TabGradient();
             WeifenLuo.WinFormsUI.Docking.TabGradient tabGradient7 = new WeifenLuo.WinFormsUI.Docking.TabGradient();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.windowTheme = new WeifenLuo.WinFormsUI.Docking.VS2012LightTheme();
             this.statusBar = new System.Windows.Forms.StatusStrip();
             this.lblInfo = new System.Windows.Forms.ToolStripStatusLabel();
@@ -51,7 +52,6 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.exitXToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.windowWToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vS2012ToolStripExtender = new DBExplorer.VS2012ToolStripExtender(this.components);
@@ -63,6 +63,7 @@
             this.btnLogWnd = new System.Windows.Forms.ToolStripButton();
             this.btnTermWnd = new System.Windows.Forms.ToolStripButton();
             this.newInstanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitXToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.serverManagerWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminalWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -114,22 +115,14 @@
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(165, 24);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(160, 24);
             this.closeToolStripMenuItem.Text = "&Close";
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(162, 6);
-            // 
-            // exitXToolStripMenuItem
-            // 
-            this.exitXToolStripMenuItem.Image = global::DBExplorer.Properties.Resources.Exit;
-            this.exitXToolStripMenuItem.Name = "exitXToolStripMenuItem";
-            this.exitXToolStripMenuItem.Size = new System.Drawing.Size(165, 24);
-            this.exitXToolStripMenuItem.Text = "E&xit";
-            this.exitXToolStripMenuItem.Click += new System.EventHandler(this.exitXToolStripMenuItem_Click);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(157, 6);
             // 
             // viewToolStripMenuItem
             // 
@@ -268,9 +261,17 @@
             // 
             this.newInstanceToolStripMenuItem.Image = global::DBExplorer.Properties.Resources.New;
             this.newInstanceToolStripMenuItem.Name = "newInstanceToolStripMenuItem";
-            this.newInstanceToolStripMenuItem.Size = new System.Drawing.Size(165, 24);
+            this.newInstanceToolStripMenuItem.Size = new System.Drawing.Size(160, 24);
             this.newInstanceToolStripMenuItem.Text = "&New Instance";
             this.newInstanceToolStripMenuItem.Click += new System.EventHandler(this.newInstanceToolStripMenuItem_Click);
+            // 
+            // exitXToolStripMenuItem
+            // 
+            this.exitXToolStripMenuItem.Image = global::DBExplorer.Properties.Resources.Exit;
+            this.exitXToolStripMenuItem.Name = "exitXToolStripMenuItem";
+            this.exitXToolStripMenuItem.Size = new System.Drawing.Size(160, 24);
+            this.exitXToolStripMenuItem.Text = "E&xit";
+            this.exitXToolStripMenuItem.Click += new System.EventHandler(this.exitXToolStripMenuItem_Click);
             // 
             // serverManagerWindowToolStripMenuItem
             // 
@@ -305,6 +306,7 @@
             this.Controls.Add(this.toolBar);
             this.Controls.Add(this.statusBar);
             this.Controls.Add(this.menuMain);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuMain;
             this.Name = "MainWindow";
