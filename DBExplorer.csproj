@@ -48,6 +48,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddEditWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEditWindow.Designer.cs">
+      <DependentUpon>AddEditWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConnectWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +88,9 @@
     </Compile>
     <Compile Include="VS2012ColorTable.cs" />
     <Compile Include="VS2012ToolStripRenderer.cs" />
+    <EmbeddedResource Include="AddEditWindow.resx">
+      <DependentUpon>AddEditWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConnectWindow.resx">
       <DependentUpon>ConnectWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -99,6 +108,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="ServerManagerWindow.resx">
       <DependentUpon>ServerManagerWindow.cs</DependentUpon>
@@ -120,10 +130,50 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FQLParserWrapper\FQLParserWrapper.vcxproj">
+      <Project>{ad01e83d-f3c7-42d7-9208-a86ee49f32ef}</Project>
+      <Name>FQLParserWrapper</Name>
+    </ProjectReference>
     <ProjectReference Include="..\VS2012ToolStripExtender\VS2012ToolStripExtender.csproj">
       <Project>{98D155EC-A35D-40D8-9635-F059F0304370}</Project>
       <Name>VS2012ToolStripExtender</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\ServerManager.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Log.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\New.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Terminal.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Connect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Refresh.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Disconnect.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Exit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Delete.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

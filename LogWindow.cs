@@ -20,7 +20,11 @@ namespace DBExplorer
 
         public void DoLog(String str)
         {
-            txtLog.Text += "[" + System.DateTime.Now.ToString() + "] " + str;
+            this.Invoke((MethodInvoker)delegate
+            {
+                txtLog.AppendText("[" + System.DateTime.Now.ToString() + "] " + str);
+                txtLog.ScrollToCaret();
+            });
         }
 
         private void LogWindow_Load(object sender, EventArgs e)

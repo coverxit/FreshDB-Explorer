@@ -49,18 +49,26 @@
             this.lblInfo = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuMain = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.connectXToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.exitXToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.windowWToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vS2012ToolStripExtender = new DBExplorer.VS2012ToolStripExtender(this.components);
+            this.toolBar = new System.Windows.Forms.ToolStrip();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.dockPanel = new WeifenLuo.WinFormsUI.Docking.DockPanel();
+            this.btnNewInstance = new System.Windows.Forms.ToolStripButton();
+            this.btnServManWnd = new System.Windows.Forms.ToolStripButton();
+            this.btnLogWnd = new System.Windows.Forms.ToolStripButton();
+            this.btnTermWnd = new System.Windows.Forms.ToolStripButton();
+            this.newInstanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.serverManagerWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.windowWToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dockPanel = new WeifenLuo.WinFormsUI.Docking.DockPanel();
-            this.vS2012ToolStripExtender1 = new DBExplorer.VS2012ToolStripExtender(this.components);
             this.terminalWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusBar.SuspendLayout();
             this.menuMain.SuspendLayout();
+            this.toolBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusBar
@@ -95,29 +103,31 @@
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.connectXToolStripMenuItem,
+            this.newInstanceToolStripMenuItem,
+            this.closeToolStripMenuItem,
             this.toolStripSeparator1,
             this.exitXToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(41, 23);
             this.fileToolStripMenuItem.Text = "&File";
             // 
-            // connectXToolStripMenuItem
+            // closeToolStripMenuItem
             // 
-            this.connectXToolStripMenuItem.Name = "connectXToolStripMenuItem";
-            this.connectXToolStripMenuItem.Size = new System.Drawing.Size(129, 24);
-            this.connectXToolStripMenuItem.Text = "&Connect";
-            this.connectXToolStripMenuItem.Click += new System.EventHandler(this.connectXToolStripMenuItem_Click);
+            this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(165, 24);
+            this.closeToolStripMenuItem.Text = "&Close";
+            this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(126, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(162, 6);
             // 
             // exitXToolStripMenuItem
             // 
+            this.exitXToolStripMenuItem.Image = global::DBExplorer.Properties.Resources.Exit;
             this.exitXToolStripMenuItem.Name = "exitXToolStripMenuItem";
-            this.exitXToolStripMenuItem.Size = new System.Drawing.Size(129, 24);
+            this.exitXToolStripMenuItem.Size = new System.Drawing.Size(165, 24);
             this.exitXToolStripMenuItem.Text = "E&xit";
             this.exitXToolStripMenuItem.Click += new System.EventHandler(this.exitXToolStripMenuItem_Click);
             // 
@@ -131,34 +141,44 @@
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(50, 23);
             this.viewToolStripMenuItem.Text = "&View";
             // 
-            // serverManagerWindowToolStripMenuItem
-            // 
-            this.serverManagerWindowToolStripMenuItem.Name = "serverManagerWindowToolStripMenuItem";
-            this.serverManagerWindowToolStripMenuItem.Size = new System.Drawing.Size(229, 24);
-            this.serverManagerWindowToolStripMenuItem.Text = "&Server Manager Window";
-            this.serverManagerWindowToolStripMenuItem.Click += new System.EventHandler(this.serverManagerWindowToolStripMenuItem_Click);
-            // 
-            // logWindowToolStripMenuItem
-            // 
-            this.logWindowToolStripMenuItem.Name = "logWindowToolStripMenuItem";
-            this.logWindowToolStripMenuItem.Size = new System.Drawing.Size(229, 24);
-            this.logWindowToolStripMenuItem.Text = "&Log Window";
-            this.logWindowToolStripMenuItem.Click += new System.EventHandler(this.logWindowToolStripMenuItem_Click);
-            // 
             // windowWToolStripMenuItem
             // 
             this.windowWToolStripMenuItem.Name = "windowWToolStripMenuItem";
             this.windowWToolStripMenuItem.Size = new System.Drawing.Size(71, 23);
             this.windowWToolStripMenuItem.Text = "&Window";
             // 
+            // vS2012ToolStripExtender
+            // 
+            this.vS2012ToolStripExtender.DefaultRenderer = null;
+            this.vS2012ToolStripExtender.VS2012Renderer = null;
+            // 
+            // toolBar
+            // 
+            this.toolBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnNewInstance,
+            this.toolStripSeparator2,
+            this.btnServManWnd,
+            this.btnLogWnd,
+            this.btnTermWnd});
+            this.toolBar.Location = new System.Drawing.Point(0, 27);
+            this.toolBar.Name = "toolBar";
+            this.toolBar.Size = new System.Drawing.Size(1072, 26);
+            this.toolBar.TabIndex = 17;
+            this.toolBar.Text = "toolStrip1";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 26);
+            // 
             // dockPanel
             // 
             this.dockPanel.BackColor = System.Drawing.SystemColors.ControlDark;
             this.dockPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dockPanel.Location = new System.Drawing.Point(0, 27);
+            this.dockPanel.Location = new System.Drawing.Point(0, 53);
             this.dockPanel.Name = "dockPanel";
             this.dockPanel.RightToLeftLayout = true;
-            this.dockPanel.Size = new System.Drawing.Size(1072, 647);
+            this.dockPanel.Size = new System.Drawing.Size(1072, 621);
             dockPanelGradient1.EndColor = System.Drawing.SystemColors.ControlLight;
             dockPanelGradient1.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             autoHideStripSkin1.DockStripGradient = dockPanelGradient1;
@@ -205,16 +225,72 @@
             dockPaneStripSkin1.ToolWindowGradient = dockPaneStripToolWindowGradient1;
             dockPanelSkin1.DockPaneStripSkin = dockPaneStripSkin1;
             this.dockPanel.Skin = dockPanelSkin1;
-            this.dockPanel.TabIndex = 12;
+            this.dockPanel.TabIndex = 19;
             this.dockPanel.Theme = this.windowTheme;
             // 
-            // vS2012ToolStripExtender1
+            // btnNewInstance
             // 
-            this.vS2012ToolStripExtender1.DefaultRenderer = null;
-            this.vS2012ToolStripExtender1.VS2012Renderer = null;
+            this.btnNewInstance.Image = global::DBExplorer.Properties.Resources.New;
+            this.btnNewInstance.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnNewInstance.Name = "btnNewInstance";
+            this.btnNewInstance.Size = new System.Drawing.Size(111, 23);
+            this.btnNewInstance.Text = "New Instance";
+            this.btnNewInstance.Click += new System.EventHandler(this.btnNewInstance_Click);
+            // 
+            // btnServManWnd
+            // 
+            this.btnServManWnd.Image = global::DBExplorer.Properties.Resources.ServerManager;
+            this.btnServManWnd.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnServManWnd.Name = "btnServManWnd";
+            this.btnServManWnd.Size = new System.Drawing.Size(175, 23);
+            this.btnServManWnd.Text = "Server Manage Window";
+            this.btnServManWnd.Click += new System.EventHandler(this.btnServManWnd_Click);
+            // 
+            // btnLogWnd
+            // 
+            this.btnLogWnd.Image = global::DBExplorer.Properties.Resources.Log;
+            this.btnLogWnd.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnLogWnd.Name = "btnLogWnd";
+            this.btnLogWnd.Size = new System.Drawing.Size(106, 23);
+            this.btnLogWnd.Text = "Log Window";
+            this.btnLogWnd.Click += new System.EventHandler(this.btnLogWnd_Click);
+            // 
+            // btnTermWnd
+            // 
+            this.btnTermWnd.Image = global::DBExplorer.Properties.Resources.Terminal;
+            this.btnTermWnd.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnTermWnd.Name = "btnTermWnd";
+            this.btnTermWnd.Size = new System.Drawing.Size(135, 23);
+            this.btnTermWnd.Text = "Terminal Window";
+            this.btnTermWnd.Click += new System.EventHandler(this.btnTermWnd_Click);
+            // 
+            // newInstanceToolStripMenuItem
+            // 
+            this.newInstanceToolStripMenuItem.Image = global::DBExplorer.Properties.Resources.New;
+            this.newInstanceToolStripMenuItem.Name = "newInstanceToolStripMenuItem";
+            this.newInstanceToolStripMenuItem.Size = new System.Drawing.Size(165, 24);
+            this.newInstanceToolStripMenuItem.Text = "&New Instance";
+            this.newInstanceToolStripMenuItem.Click += new System.EventHandler(this.newInstanceToolStripMenuItem_Click);
+            // 
+            // serverManagerWindowToolStripMenuItem
+            // 
+            this.serverManagerWindowToolStripMenuItem.Image = global::DBExplorer.Properties.Resources.ServerManager;
+            this.serverManagerWindowToolStripMenuItem.Name = "serverManagerWindowToolStripMenuItem";
+            this.serverManagerWindowToolStripMenuItem.Size = new System.Drawing.Size(229, 24);
+            this.serverManagerWindowToolStripMenuItem.Text = "&Server Manager Window";
+            this.serverManagerWindowToolStripMenuItem.Click += new System.EventHandler(this.serverManagerWindowToolStripMenuItem_Click);
+            // 
+            // logWindowToolStripMenuItem
+            // 
+            this.logWindowToolStripMenuItem.Image = global::DBExplorer.Properties.Resources.Log;
+            this.logWindowToolStripMenuItem.Name = "logWindowToolStripMenuItem";
+            this.logWindowToolStripMenuItem.Size = new System.Drawing.Size(229, 24);
+            this.logWindowToolStripMenuItem.Text = "&Log Window";
+            this.logWindowToolStripMenuItem.Click += new System.EventHandler(this.logWindowToolStripMenuItem_Click);
             // 
             // terminalWindowToolStripMenuItem
             // 
+            this.terminalWindowToolStripMenuItem.Image = global::DBExplorer.Properties.Resources.Terminal;
             this.terminalWindowToolStripMenuItem.Name = "terminalWindowToolStripMenuItem";
             this.terminalWindowToolStripMenuItem.Size = new System.Drawing.Size(229, 24);
             this.terminalWindowToolStripMenuItem.Text = "&Terminal Window";
@@ -226,18 +302,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1072, 698);
             this.Controls.Add(this.dockPanel);
+            this.Controls.Add(this.toolBar);
             this.Controls.Add(this.statusBar);
             this.Controls.Add(this.menuMain);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuMain;
             this.Name = "MainWindow";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FreshDB Explorer";
             this.Load += new System.EventHandler(this.MainWindow_Load);
             this.statusBar.ResumeLayout(false);
             this.statusBar.PerformLayout();
             this.menuMain.ResumeLayout(false);
             this.menuMain.PerformLayout();
+            this.toolBar.ResumeLayout(false);
+            this.toolBar.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -252,14 +330,21 @@
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
         private System.Windows.Forms.ToolStripStatusLabel lblInfo;
         private System.Windows.Forms.ToolStripMenuItem windowWToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem connectXToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem exitXToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem serverManagerWindowToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logWindowToolStripMenuItem;
-        private VS2012ToolStripExtender vS2012ToolStripExtender1;
-        internal WeifenLuo.WinFormsUI.Docking.DockPanel dockPanel;
+        private VS2012ToolStripExtender vS2012ToolStripExtender;
         private System.Windows.Forms.ToolStripMenuItem terminalWindowToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem newInstanceToolStripMenuItem;
+        private System.Windows.Forms.ToolStrip toolBar;
+        internal WeifenLuo.WinFormsUI.Docking.DockPanel dockPanel;
+        private System.Windows.Forms.ToolStripButton btnNewInstance;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton btnServManWnd;
+        private System.Windows.Forms.ToolStripButton btnLogWnd;
+        private System.Windows.Forms.ToolStripButton btnTermWnd;
+        private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
 
     }
 }

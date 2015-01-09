@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TerminalWindow));
             this.richTxtTerm = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
@@ -41,6 +42,7 @@
             this.richTxtTerm.Size = new System.Drawing.Size(282, 256);
             this.richTxtTerm.TabIndex = 0;
             this.richTxtTerm.Text = "";
+            this.richTxtTerm.KeyDown += new System.Windows.Forms.KeyEventHandler(this.richTxtTerm_KeyDown);
             // 
             // TerminalWindow
             // 
@@ -48,8 +50,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(282, 256);
             this.Controls.Add(this.richTxtTerm);
+            this.DockAreas = ((WeifenLuo.WinFormsUI.Docking.DockAreas)((WeifenLuo.WinFormsUI.Docking.DockAreas.Float | WeifenLuo.WinFormsUI.Docking.DockAreas.Document)));
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.HideOnClose = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TerminalWindow";
             this.RightToLeftLayout = true;
             this.Text = "Terminal";
